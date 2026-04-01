@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form PPDB SMA NEGERI 1 MANYAR</title>
+    <!-- Memanggil file CSS -->
+    <link rel="stylesheet" href="style1.css">
+</head>
+
+<body>
+
+    <div class="main">
+        <form action="form pendaftaran.html" class="loginForm" id="ppdbForm">
+            <div class="header">
+                <img src="logo.jpeg" alt="Logo">
+                <div class="title">
+                    <h2>Form PPDB SMAN 1 Manyar</h2>
+                    <p class="slogan">"Born To Be Champion"</p>
+                </div>
+            </div>
+
+            <!-- Indikator Posisi Step -->
+            <div class="progress-indicator" id="progressText">
+                Langkah 1 dari 5
+            </div>
+
+            <!-- STEP 1 -->
+            <div class="form-step active" id="step1">
+                <div class="section">
+                    <h3>A. Data Pribadi</h3>
+                    <input type="text" placeholder="Nama Lengkap">
+                    <div class="inline">
+                        <label><input type="radio" name="jk"> Laki-laki</label>
+                        <label><input type="radio" name="jk"> Perempuan</label>
+                    </div>
+                    <label>Tempat dan Tanggal Lahir</label>
+                    <div class="inline">
+                        <input type="text" placeholder="Tempat Lahir" style="flex:2;">
+                        <input type="date" style="flex:1;">
+                    </div>
+                    <input type="text" placeholder="NISN">
+                    <input type="text" placeholder="Agama">
+                    <textarea placeholder="Alamat Lengkap"></textarea>
+                    <input type="tel" placeholder="No HP Siswa">
+                </div>
+                <div class="btn-group">
+                    <div></div> <!-- Spacer agar tombol Next di kanan -->
+                    <button type="button" onclick="nextStep(1)">Selanjutnya &#8594;</button>
+                </div>
+            </div>
+
+            <!-- STEP 2 -->
+            <div class="form-step" id="step2">
+                <div class="section">
+                    <h3>B. Data Orang Tua / Wali</h3>
+                    <input type="text" placeholder="Nama Ayah">
+                    <input type="text" placeholder="Nama Ibu">
+                    <input type="text" placeholder="Pekerjaan Orang Tua">
+                    <input type="tel" placeholder="No HP Orang Tua">
+                    <textarea placeholder="Alamat Orang Tua (jika berbeda)"></textarea>
+                </div>
+                <div class="btn-group">
+                    <button type="button" class="btn-prev" onclick="prevStep(2)">&#8592; Sebelumnya</button>
+                    <button type="button" onclick="nextStep(2)">Selanjutnya &#8594;</button>
+                </div>
+            </div>
+
+            <!-- STEP 3 -->
+            <div class="form-step" id="step3">
+                <div class="section">
+                    <h3>C. Data Akademik</h3>
+                    <input type="text" placeholder="Asal Sekolah (SMP)">
+                    <input type="number" placeholder="Nilai Rata-rata Rapor">
+                    <input type="number" placeholder="Nilai Ujian">
+                    <textarea placeholder="Prestasi (opsional)"></textarea>
+                </div>
+                <div class="btn-group">
+                    <button type="button" class="btn-prev" onclick="prevStep(3)">&#8592; Sebelumnya</button>
+                    <button type="button" onclick="nextStep(3)">Selanjutnya &#8594;</button>
+                </div>
+            </div>
+
+            <!-- STEP 4 -->
+            <div class="form-step" id="step4">
+                <div class="section">
+                    <h3>D. Pilihan & Minat</h3>
+                    <div class="inline">
+                        <label><input type="radio" name="jurusan"> IPA</label>
+                        <label><input type="radio" name="jurusan"> IPS</label>
+                    </div>
+                    <textarea placeholder="Alasan memilih sekolah (opsional)"></textarea>
+                    <input type="text" placeholder="Minat Ekstrakurikuler">
+                </div>
+                <div class="btn-group">
+                    <button type="button" class="btn-prev" onclick="prevStep(4)">&#8592; Sebelumnya</button>
+                    <button type="button" onclick="nextStep(4)">Selanjutnya &#8594;</button>
+                </div>
+            </div>
+
+            <!-- STEP 5 -->
+            <div class="form-step" id="step5">
+                <div class="section">
+                    <h3>E. Data Administratif</h3>
+                    <label>Upload Foto</label>
+                    <input type="file">
+                    <label>Upload KK / Akta</label>
+                    <input type="file">
+                    <label>Upload Rapor</label>
+                    <input type="file">
+                    <input type="email" placeholder="Email Aktif">
+                </div>
+                <div class="btn-group">
+                    <button type="button" class="btn-prev" onclick="prevStep(5)">&#8592; Sebelumnya</button>
+                    <button type="submit">Daftar Sekarang</button>
+                </div>
+            </div>
+
+        </form>
+    </div>
+
+    <script src="next.js"></script>
+
+</body>
+
+</html>
